@@ -1,0 +1,48 @@
+GNU mcron --- TODO                                  -*-text-*-
+
+  Copyright (C) 2003, 2005, 2006, 2014  Dale Mellor
+
+  Copying and distribution of this file, with or without modification,
+  are permitted in any medium without royalty provided the copyright
+  notice and this notice are preserved.
+
+
+
+Maybe in the near future...
+
+    * Logging.
+
+    * Check POSIX compliance (should be okay if Vixie cron was okay).
+
+    * Work out how to give each user his own closure (or environment or module
+       or continuation) for his configuration files so that he can't mess the
+       core or other users' files up. Then allow scheme code in the system
+       crontabs.
+              
+
+
+There are no plans to actually do the following any time soon...
+
+    * Develop at and batch modes of operation.
+
+    * Make compatibilities with other crons (BSD, SYSV, Solaris, Dillon's, ...)
+
+    * Port to BSD, other operating systems.
+
+    * Full security audit for Vixie mode.
+
+
+
+May happen if version 2.0 ever materializes...
+
+    * UNIX or TCP socket will allow interrogation and control of a running
+       daemon (unrelated to, or maybe a major enhancement of, socket used for
+       communication from crontab process).
+
+    * Add anacron functionality (run missed jobs if the daemon is stopped, for
+       example if a personal computer does not run 24 hours a day).
+
+    * TCP socket to allow control via HTTP (web browser interface). Or maybe
+       crontab-like CGI personality.
+
+    * GTK+/d-bus/Gnome3 interface.
