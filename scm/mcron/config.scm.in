@@ -25,7 +25,6 @@
 (define-public config-debug @CONFIG_DEBUG@)
 (define-public config-package-string "@PACKAGE_STRING@")
 (define-public config-package-bugreport "@PACKAGE_BUGREPORT@")
-(define-public config-sendmail "@SENDMAIL@")
 
 (define-public config-spool-dir "@CONFIG_SPOOL_DIR@")
 (define-public config-socket-file "@CONFIG_SOCKET_FILE@")
