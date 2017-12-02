@@ -1,5 +1,5 @@
 EXTRA_DIST = main.scm mcron-core.scm vixie-specification.scm \
-             crontab.scm environment.scm job-specifier.scm redirect.scm \
+             crontab.scm environment.scm job-specifier.scm \
              vixie-time.scm
 
 pkgdata_DATA = core.scm environment.scm job-specifier.scm redirect.scm \
