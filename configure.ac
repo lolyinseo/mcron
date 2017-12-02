@@ -71,29 +71,6 @@ if test "x$ac_cv_prog_CP" = "x"; then
     AC_MSG_ERROR(cp not found)
 fi
 
-
-# Now find a sendmail or equivalent.
-
-AC_CHECK_PROGS(SENDMAIL, sendmail)
-if test "x$ac_cv_prog_SENDMAIL" != "x"; then
-   AC_MSG_CHECKING(sendmail path and arguments)
-   ac_cv_prog_SENDMAIL="`$ac_cv_prog_WHICH sendmail` -FCronDaemon -odi -oem "
-dnl  -or0s"
-   AC_MSG_RESULT($ac_cv_prog_SENDMAIL)
-
-else
-   AC_CHECK_PROGS(SENDMAIL, mail)
-   if test "x$ac_cv_prog_SENDMAIL" != "x"; then
-      AC_MSG_CHECKING(mail path)
-      ac_cv_prog_SENDMAIL="`$ac_cv_prog_WHICH mail` -d "
-      AC_MSG_RESULT($ac_cv_prog_SENDMAIL)
-   else
-      AC_MSG_RESULT(No mail program found)
-   fi
-fi
-SENDMAIL=$ac_cv_prog_SENDMAIL
-
-
 # Find out if we are avoiding Vixie.
 
 AC_MSG_CHECKING([whether to avoid clobbering a Vixie installation])
