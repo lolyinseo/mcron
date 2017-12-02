@@ -32,7 +32,6 @@
   #:use-module ((mcron config) :select (config-socket-file))
   #:use-module (mcron core)
   #:use-module (mcron job-specifier)
-  #:use-module (mcron redirect)
   #:use-module (mcron vixie-time))
 
 
@@ -57,7 +56,6 @@
     (if (not match) 
         (throw 'mcron-error 10 "Bad job line in Vixie file."))
     (job (match:substring match 1)
-         (lambda () (with-mail-out (match:substring match 3)))
          (match:substring match 3))))
 
 
@@ -76,8 +74,6 @@
     (let ((user (match:substring match 3)))
       (set-configuration-user user)
       (job (match:substring match 1)
-           (lambda () (with-mail-out (match:substring match 4)
-                                     user))
            (match:substring match 4)))))
 
 
