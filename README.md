@@ -1,6 +1,6 @@
 # mcron
 
-#### Run every 1 sec
+#### Run every 10 sec
 ```
 (job '(next-second (range 0 60 10)) "your command")
 ```
