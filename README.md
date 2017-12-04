@@ -4,7 +4,7 @@
 ```
 (job '(next-second (range 0 60 10)) "your command")
 ```
-#### Run on 15 sec of each minute 1:15
+#### Run on 15 sec of each minute 1:15, 2:15 ... 59:15
 ```
 (job
     '(next-second-from
